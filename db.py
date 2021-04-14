@@ -9,7 +9,9 @@ def check_if_entry_exist(**kwargs):
         connection = sqlite3.connect("xckd.db")
         cursor = connection.cursor()
         title_to_check = kwargs["title"]
-        check_query = cursor.execute("SELECT * FROM xkcd WHERE title=(?)", (title_to_check,))
+        check_query = cursor.execute(
+            "SELECT * FROM xkcd WHERE title=(?)", (title_to_check,)
+        )
         does_exist = check_query.fetchone()
         if does_exist is not None:
             return True

@@ -20,11 +20,15 @@ while num < 6:
 
     # check if folder img exists
     if os.path.exists(os.getcwd() + "\\img"):
-        with open(f"{os.path.abspath('img')}/{str(num)}) {comic_title}.jpg", "w+b") as f:
+        with open(
+            f"{os.path.abspath('img')}/{str(num)}) {comic_title}.jpg", "w+b"
+        ) as f:
             f.write(img)
     else:
         os.mkdir(os.getcwd() + "\\img")
-        with open(f"{os.path.abspath('img')}/{str(num)}) {comic_title}.jpg", "w+b") as f:
+        with open(
+            f"{os.path.abspath('img')}/{str(num)}) {comic_title}.jpg", "w+b"
+        ) as f:
             f.write(img)
 
     file_path = f'{os.path.abspath("img")}\\{str(num)}) {comic_title}.jpg'
