@@ -15,7 +15,7 @@ run `$ python3 main.py`
 First time running the program  
 ![first time you run the program](https://i.imgur.com/RZhwjdR.png)  
 If the images already exist in the db  
-![second time running the program](https://i.imgur.com/wkkPYPO.png)
+![second time running the program](https://i.imgur.com/O0xQ7EU.png)
 
 ## Libraries used
 * Requests
