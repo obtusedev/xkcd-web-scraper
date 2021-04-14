@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from db import insert_comic_data
 
 num = 1
-while num < 25:
+while num < 6:
     print(f"Scraping...{num}")
     url = f"https://xkcd.com/{num}/"
 
@@ -18,8 +18,14 @@ while num < 25:
 
     img = requests.get(img_link).content
 
-    with open(f"{os.path.abspath('img')}/{str(num)}) {comic_title}.jpg", "w+b") as f:
-        f.write(img)
+    # check if folder img exists
+    if os.path.exists(os.getcwd() + "\\img"):
+        with open(f"{os.path.abspath('img')}/{str(num)}) {comic_title}.jpg", "w+b") as f:
+            f.write(img)
+    else:
+        os.mkdir(os.getcwd() + "\\img")
+        with open(f"{os.path.abspath('img')}/{str(num)}) {comic_title}.jpg", "w+b") as f:
+            f.write(img)
 
     file_path = f'{os.path.abspath("img")}\\{str(num)}) {comic_title}.jpg'
 
@@ -39,4 +45,5 @@ print("Done")
 2) Find way to get path to img; maybe os.path.abspath()
 3) Insert the data into db
 4) Add progress indicator
+5) Make img folder/dir if it does not exist
 """
