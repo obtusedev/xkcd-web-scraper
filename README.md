@@ -13,9 +13,9 @@ run `$ python3 main.py`
 
 ## Screenshots
 First time running the program  
-![first time you run the program](https://i.imgur.com/DNX6Rlf.png)  
+![first time you run the program](https://i.imgur.com/RZhwjdR.png)  
 If the images already exist in the db  
-![second time running the program](https://i.imgur.com/kclAcLD.png)
+![second time running the program](https://i.imgur.com/wkkPYPO.png)
 
 ## Libraries used
 * Requests
